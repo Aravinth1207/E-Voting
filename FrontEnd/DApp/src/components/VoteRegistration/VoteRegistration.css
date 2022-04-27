@@ -1,0 +1,43 @@
+.vregister-wrapper {
+
+    margin: auto;
+    margin-top: 200px;
+    margin-right: 400px;
+    width: 800px;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: 2px solid #ccc;
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 40px;
+    padding-bottom: 10px;
+}
+
+.form-heading {
+    font-size: 1.6rem;
+    color: #333;
+    align-items: center;
+    font-weight: 550;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    background-color: #44cee3;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    display: flex;
+    margin-top: -90px;
+    justify-content: center;
+    padding: 20px;
+
+}

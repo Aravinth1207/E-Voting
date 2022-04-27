@@ -1,0 +1,139 @@
+.burger-wrapper {
+    z-index: 10;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    position: fixed;
+    display: flex;
+    background: #f5f8ff;
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+
+
+.burger-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    grid-template-columns: auto auto auto;
+    grid-gap: 40px;
+}
+
+
+
+
+
+.burger-item {
+    z-index: 10;
+    justify-content: flex-start;
+    align-items: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    background-color: #44cee3;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.burger-menu {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+
+
+@media screen and (max-width: 769px) {
+    .burger-menu-wrapper {
+        z-index: 10;
+        justify-content: flex-start;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 400px;
+        position: fixed;
+        display: flex;
+        background: #f5f8ff;
+        list-style: none;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        text-align: center;
+        -webkit-transition: opacity 1s ease-in;
+        -moz-transition: opacity 1s ease-in;
+        -o-transition: opacity 1s ease-in;
+        transition: opacity 1s ease-in;
+
+    }
+
+    .burger-menu-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        grid-template-columns: auto auto auto;
+        grid-gap: 40px;
+    }
+
+    .burger-wrapper {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .burger-menu {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+.burger-item:hover {
+    background-color: rgb(29, 255, 176);
+}
+
+
+
+p {
+    font-size: 1.2rem;
+    color: black;
+    margin: auto;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 500px;
+    grid-template-columns: auto auto auto;
+    grid-gap: 40px;
+}
