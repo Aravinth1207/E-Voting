@@ -26,7 +26,7 @@ code {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #02a0c7
+    background-color: #d1e5f8
 }
 
 
@@ -40,7 +40,6 @@ code {
     box-shadow: 0px 10px 50px #555;
     background-color: #ffffff;
     position: relative;
-
 }
 
 
@@ -124,6 +123,10 @@ input::placeholder {
     border-style: none;
 }
 
+.button:hover {
+    background-color: rgb(83, 247, 190);
+}
+
 .btn-wrapper {
     display: flex;
     align-items: center;
@@ -153,4 +156,26 @@ span {
 a {
     color: #44cee3;
     text-decoration: none;
+}
+
+
+@media screen and (max-width:768px) {
+    .form-wrapper {
+        width: 300px;
+    }
+
+    .wrapper {
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+    }
+
+
+    .field {
+        width: 100%;
+    }
+
+    input {
+        font-size: 1rem;
+    }
 }

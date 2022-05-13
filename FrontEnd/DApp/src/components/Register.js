@@ -7,20 +7,10 @@ const Register = () => {
     const [fullname, setFullname] = React.useState('')
     const [password, setPassword] = React.useState('')
     const [email, setEmail] = React.useState('')
-    const [phone, setPhone] = React.useState('')
-    const [city, setCity] = React.useState('')
-    const [state, setState] = React.useState('')
-    const [zip, setZip] = React.useState('')
-    const [address, setAddress] = React.useState('')
-    const enabled = username.length > 3 && fullname.length > 3 && password.length > 3 && email.length > 3 && phone.length > 3 && city.length > 3 && state.length > 3 && zip.length > 3 && address.length > 3
+    const enabled = username.length > 3 && fullname.length > 3 && password.length > 3 && email.length > 3
     const [error, setError] = React.useState(false)
     const [nameValid, setNameValid] = React.useState(false)
     const [emailValid, setEmailValid] = React.useState(false)
-    const [phoneValid, setPhoneValid] = React.useState(false)
-    const [cityValid, setCityValid] = React.useState(false)
-    const [stateValid, setStateValid] = React.useState(false)
-    const [zipValid, setZipValid] = React.useState(false)
-    const [addressValid, setAddressValid] = React.useState(false)
     const [passwordValid, setPasswordValid] = React.useState(false)
     const [fnameValid, setFnameValid] = React.useState(false)
     const emailRegex = RegExp(
@@ -35,7 +25,7 @@ const Register = () => {
                 'Access-Control-Allow-Headers': 'Origin',
             }
         };
-        const body = { username, password, fullname, email, phone, city, state, zip, address };
+        const body = { username, password, fullname, email };
         post(url, body, config).then(res => {
             console.log(res);
         }).catch(data => {
@@ -58,7 +48,7 @@ const Register = () => {
                             onFocus={() => setError(false)}
                             onChange={(e) => {
                                 setUsername(e.target.value)
-                                if (e.target.value.length < 3) {
+                                if (e.target.value.length > 3) {
                                     setNameValid(false)
                                 }
                                 else {
@@ -123,26 +113,7 @@ const Register = () => {
                         />
                         {emailValid ? <span >Invalid Email</span> : ""}
                     </div>
-                    <div className="field">
-                        <input
-                            placeholder="Phone"
-                            type="number"
-                            name="phone"
-                            required
-                            onFocus={() => setPhoneValid(false)}
-                            onChange={(e) => setPhone(e.target.value)}
-                            onBlur={(e) => {
-                                if (e.target.value.length !== 10) {
-                                    setPhoneValid(true)
-                                }
-                                else {
-                                    setPhoneValid(false)
-                                }
-                            }}
-                            {...(phoneValid ? { style: { border: '1px solid red' } } : {})}
-                        />
 
-                    </div>
                     <div className="field">
                         <input
                             placeholder="Password"
@@ -162,84 +133,6 @@ const Register = () => {
                             {...(passwordValid ? { style: { border: '1px solid red' } } : {})}
                         />
                         {passwordValid ? <span >Password must be at least 6 characters</span> : ""}
-                    </div>
-                    <div className="field">
-                        <input
-                            placeholder="Address"
-                            type="text"
-                            name="address"
-                            required
-                            onFocus={() => setAddressValid(false)}
-                            onChange={(e) => setAddress(e.target.value)}
-                            onBlur={(e) => {
-                                if (e.target.value.length < 3) {
-                                    setAddressValid(true)
-                                }
-                                else {
-                                    setAddressValid(false)
-                                }
-                            }}
-                            {...(addressValid ? { style: { border: '1px solid red' } } : {})}
-                        />
-                    </div>
-                    <div className="field">
-                        <input
-                            placeholder="City"
-                            type="text"
-                            name="city"
-                            required
-                            onFocus={() => setCityValid(false)}
-                            onChange={(e) => setCity(e.target.value)}
-                            onBlur={(e) => {
-                                if (e.target.value.length < 3) {
-                                    setCityValid(true)
-                                }
-                                else {
-                                    setCityValid(false)
-                                }
-                            }}
-                            {...(cityValid ? { style: { border: '1px solid red' } } : {})}
-                        />
-                    </div>
-                    <div className="field">
-                        <input
-                            placeholder="State"
-                            type="text"
-                            name="state"
-                            required
-                            onFocus={() => setStateValid(false)}
-                            onChange={(e) => setState(e.target.value)}
-                            onBlur={(e) => {
-                                if (e.target.value.length < 3) {
-                                    setStateValid(true)
-                                }
-                                else {
-                                    setStateValid(false)
-                                }
-                            }}
-                            {...(stateValid ? { style: { border: '1px solid red' } } : {})}
-                        />
-                    </div>
-                    <div className="field">
-                        <input
-                            placeholder="Pin Code"
-                            type="number"
-                            name="zip"
-                            required
-                            onFocus={() => setZipValid(false)}
-                            onChange={(e) => setZip(e.target.value)}
-                            onBlur={(e) => {
-                                console.log(enabled)
-                                if (e.target.value.length !== 6) {
-                                    setZipValid(true)
-                                }
-                                else {
-                                    setZipValid(false)
-                                }
-                            }}
-                            {...(zipValid ? { style: { border: '2px solid red' } } : {})}
-                        />
-                        {zipValid ? <span >Invalid Pin Code</span> : ""}
                     </div>
                     <div className="btn-wrapper">
                         <button

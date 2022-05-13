@@ -2,6 +2,9 @@ import React from 'react'
 import "./VoteRegistration.css"
 
 const VoteRegistration = () => {
+    const [aadhar, setAadhar] = React.useState("");
+    const [accAddress, setAccAddress] = React.useState("");
+
     return (
         <>
             <div className="vregister-wrapper">
@@ -12,27 +15,29 @@ const VoteRegistration = () => {
                         </div>
                     </div>
                     <form>
-                        <div className="field">
+                        <div className="fields">
                             <input
                                 placeholder="Aadhar Number"
                                 type="number"
                                 name="aadhar"
                                 noValidate
                                 required
+                                onChange={(e) => setAadhar(e.target.value)}
                             />
                         </div>
-                        <div className="field">
+                        <div className="fields">
                             <input
                                 placeholder="Account Address"
                                 type="text"
                                 name="address"
                                 noValidate
                                 required
+                                onChange={(e) => setAccAddress(e.target.value)}
                             />
                         </div>
                     </form>
                     <div className="btn-wrapper">
-                        <button className='button'>Register</button>
+                        <button className='button' onClick={(e) => { console.log(aadhar, accAddress) }}>Register</button>
                     </div>
                 </div>
             </div>

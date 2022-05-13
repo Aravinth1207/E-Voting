@@ -7,15 +7,16 @@ import BurgerNav from './BurgerNav/BurgerNav'
 import Info from './info/Info'
 import VoteRegistration from './VoteRegistration/VoteRegistration';
 import Result from './Result/Result';
+import Entrance from './Home/Entrance'
 
-export const Home = () => {
+export const Nav = () => {
     return (
         <>
             <Router>
                 <Routes>
+                    <Route path="/" element={<Entrance />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
-                    <Route path="/home" element={<><BurgerNav /></>} />
                     <Route path="/voting" element={<><BurgerNav /><Voting /></>} />
                     <Route path="/info" element={<><BurgerNav /><Info /></>} />
                     <Route path="/vregister" element={<><BurgerNav /><VoteRegistration /></>} />

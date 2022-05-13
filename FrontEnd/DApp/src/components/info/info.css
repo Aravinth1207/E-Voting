@@ -23,12 +23,15 @@
 article {
     border: 2px solid #ccc;
     width: 900px;
+    justify-content: center;
     margin: auto;
+    margin-left: 11px;
     padding: 10px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 40px;
     padding-bottom: 10px;
+    background-color: #d1e5f8;
 }
 
 .article-heading {
@@ -58,7 +61,10 @@ article {
     margin-top: 80px;
     grid-template-columns: auto auto auto;
     grid-gap: 40px;
+
 }
+
+
 
 @media screen and (max-width: 768px) {
     .info-container {

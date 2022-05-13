@@ -5,7 +5,6 @@ const Info = () => {
         //create a article tag and some text
 
         <div className='info-container'>
-
             <article>
                 <div className="info-title">
                     <div className="article-heading">
